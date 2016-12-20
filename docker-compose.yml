@@ -9,7 +9,6 @@ web:
         - php
 php:    
     build: .
-    #image: php:7-fpm
     volumes:
         - ../:/www
     links: 
@@ -26,11 +25,3 @@ mongo:
     image: mongo:3.4
     ports:
         - "27017:27017"
-nodejs:
-    image: node:7.2.0
-    ports:
-        - "3000:3000"
-    #links:
-        #- php
-    volumes:
-       - ../monitoria:/monitoria
